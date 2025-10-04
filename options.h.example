@@ -1,0 +1,9 @@
+#ifndef ENV_H_
+#define ENV_H_
+
+const char* wifi_ssid = "";
+const char* wifi_pass = "";
+const char* url = "";
+const char* ntp_server = "";
+
+#endif // ENV_H_
