@@ -1,0 +1,4 @@
+WIFI_SSID : str = ""
+WIFI_PASSWORD : str = ""
+NTP_SERVER : str = ""
+WEB_URL : str = ""
