@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frankom Meteo</title>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body style="background-color: #37353E; font-family: monospace;">
+    <style>
+      div h2{
+        font-weight: normal;
+      }
+      div div{
+        min-width: 20%;
+        border-radius: 20px;
+      }
+      #main{
+        flex-direction: column;
+      }
+      fieldset{
+        border: none; 
+        border-top: white solid 2px; 
+        margin: auto;
+      }
+      legend{
+        color: white; 
+      }
+
+      @media (min-width: 1024px) {
+        #main{
+          flex-direction: row;
+          width: 60%;
+          margin: auto;
+        }
+        .charts{
+          max-width: 60%;
+          max-height: 400px;
+        }
+        fieldset{
+          width: 60%;
+        }
+        hr{
+          width: 60%;
+        }
+      }
+    </style>
+
+    <div style="display: flex; gap: 2%; justify-content: center; text-align: center;" id="main">
+      
+      <div style="background-color: lightskyblue;">
+        <h2>Temperatura</h2>
+        <h1>{{temp}}°C</h1>
+      </div>
+
+      <div style="background-color: lightyellow;"> 
+        <h2>Ciśnienie</h2>
+        <h1>{{press}} hPa</h1>
+      </div>
+
+      <div style="background-color: lightgreen;">
+        <h2>Wilgotność</h2>
+        <h1>{{hum}}%</h1>
+      </div>
+
+      <div style="background-color: lightblue; min-width: 10%;">
+        <h2>Deszcz</h2>
+        <h1>{{rain}}</h1>
+      </div>
+    </div>
+    <br>
+    <h2 style="text-align: center; font-weight: normal; color: white;">Ostatni pomiar: <span style="font-weight: bold;">{{date}}</span></h2>
+    <br>
+
+    <div style="display: flex; flex-direction: column; align-items:center;">
+	    <p style="text-align: center; color: white;"></p>
+      <fieldset>
+        <legend align="center" style="font-size: larger;">Pomiary z ostatniej godziny</legend>
+      </fieldset>
+	    <canvas id="temp1h" class="charts"></canvas>
+	    <br>
+	    <canvas id="press1h" class="charts"></canvas>
+	    <br>
+	    <canvas id="hum1h" class="charts"></canvas>
+      <script src="{{ url_for('static', filename='gencharts.js') }}"></script>
+    </div>
+
+    <footer style="margin-top: 5%;">
+      <br>
+      <fieldset>
+        <legend align="center" style="font-size: small;">© 2025 By Frankom</legend>
+      </fieldset>
+    </footer>
+  </body>
+
+</html> 

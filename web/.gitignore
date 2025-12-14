@@ -1,0 +1,6 @@
+/database.db
+/.venv/
+/__pycache__/
+/test.py
+/database.db-wal
+/database.db-shm
