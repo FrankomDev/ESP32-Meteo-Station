@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import sqlite3
-import json
 from datetime import datetime
 
 app = Flask(__name__)
@@ -62,8 +61,9 @@ def get1h():
 
 @app.route('/api/send', methods=['POST'])
 def send():
-    data = request.get_data()
-    data = json.loads(data)
+    data = request.json
+    #data = request.get_data()
+    #data = json.loads(data)
     temperature = round(data['temperature'], 2)
     pressure = round(data['pressure'], 1)
     humidity = round(data['humidity'], 1)

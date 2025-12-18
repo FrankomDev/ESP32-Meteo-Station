@@ -1,0 +1,11 @@
+#ifndef OPTIONS_H
+#define OPTIONS_H
+
+
+// modify here
+#define POST_URL "http://127.0.0.1:8080/send"
+#define BROKER_ADDRESS "127.0.0.1"
+#define BROKER_PORT 1883
+
+
+#endif //OPTIONS_H
