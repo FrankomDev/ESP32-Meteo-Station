@@ -1,4 +1,4 @@
 # ESP32 Meteo Station
-Code for my ESP32 + BME280 Meteo Station <br>
-works with this [website](https://github.com/FrankomDev/Meteo-Station)
-
+My ESP32 + BME280 Meteo Station <br>
+`web/` -- website source code <br> 
+`mqtt_handler/` -- MQTT receiver which connects with website
