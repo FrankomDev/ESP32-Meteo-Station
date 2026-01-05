@@ -8,7 +8,7 @@ def configure_db() -> None:
     connection = sqlite3.connect('database.db')
     cursor = connection.cursor()
     cursor.execute("CREATE TABLE IF NOT EXISTS temperature "+
-                   "(id num, temperature num, pressure num, humidity num, rain num, day num, month num, year num, hour num, minute num)")
+                   "(id num, temperature num, pressure num, humidity num, rain num, day text, month text, year num, hour text, minute text)")
     connection.commit()
     connection.close()
 

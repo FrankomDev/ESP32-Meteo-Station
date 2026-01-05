@@ -1,6 +1,5 @@
 import network
 import options as options
-#import bme280 as bme280
 import time
 import ntptime
 import machine
@@ -8,10 +7,6 @@ import send as send
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(False)
-
-"""def get_data_from_bme():
-    send.send_data()
-    machine.deepsleep(899000) # 14.98333 minutes"""
 
 if not wlan.isconnected():
     wlan.active(True)

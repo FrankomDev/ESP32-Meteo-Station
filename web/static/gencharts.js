@@ -20,7 +20,7 @@ function createChart(data) {
       labels: [date1, date2, date3, date4],
       datasets: [
         {
-          label: "Temperatura °C",
+          label: "Temperatura [°C]",
           data: [data[3][1], data[2][1], data[1][1], data[0][1]],
           borderWidth: 1,
           backgroundColor: "#466EFD",
@@ -42,7 +42,7 @@ function createChart(data) {
       labels: [date1, date2, date3, date4],
       datasets: [
         {
-          label: "Ciśnienie hPa",
+          label: "Ciśnienie [hPa]",
           data: [data[3][2], data[2][2], data[1][2], data[0][2]],
           borderWidth: 1,
           backgroundColor: "#F6C109",
@@ -64,7 +64,7 @@ function createChart(data) {
       labels: [date1, date2, date3, date4],
       datasets: [
         {
-          label: "Wilgotność %",
+          label: "Wilgotność [%]",
           data: [data[3][3], data[2][3], data[1][3], data[0][3]],
           borderWidth: 1,
           backgroundColor: "#248754",
